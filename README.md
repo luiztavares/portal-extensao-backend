@@ -6,8 +6,9 @@ Backend do Portal da Extensão da UFRJ
 
     python3
         https://www.python.org/downloads/
+    django
+        pip3 install django
     requiriments.txt
-        pip3 install -f requiriments.txt
 
 # Como rodar
 
