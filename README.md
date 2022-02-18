@@ -14,3 +14,7 @@ Backend do Portal da Extensão da UFRJ
 
     cd app
     python3 manage.py runserver
+
+# Tutorial scrapy
+
+    https://docs.scrapy.org/en/latest/intro/tutorial.html
