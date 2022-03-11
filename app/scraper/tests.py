@@ -11,15 +11,15 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 
 modalidades = {
-    #0: 'Curso',
+    0: 'Curso',
     #1: 'Evento',
     #2: 'Programa',
-    3: 'Projeto',
+    #3: 'Projeto',
 }
 
 def toDate(s):
     s = s.replace(' ','')
-
+    
     if (len(s) >= 10):
         return f'{s[6:10]}-{s[3:5]}-{s[:2]}'
     else:
@@ -47,7 +47,7 @@ for key in modalidades:
     driver = init_driver(modalidades[key])
 
     num_paginas = int(driver.find_element_by_css_selector('#gnosys-filtro-paginacao-campos span').text)
-    for pag_atual in range(1,num_paginas+1) :
+    for pag_atual in range(3,num_paginas+1) :
         atual = driver.find_element_by_css_selector('#gnosys-filtro-paginacao-paginaAtual')
         atual.clear()
         atual.send_keys(pag_atual)
