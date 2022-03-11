@@ -43,7 +43,7 @@ class CaracterizacaoDeEvento(models.Model):
     tema_geral_do_evento = models.CharField(max_length=100)
 
 class Periodo(models.Model):
-    inicio = models.DateField()
+    inicio = models.DateField(null=True)
     fim = models.DateField(null=True)
 
     def __str__(self):
